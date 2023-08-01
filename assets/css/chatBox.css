@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&family=Dosis:wght@300;400&family=Inter:wght@400;700;800&family=Kumbh+Sans:wght@400;700&family=Overpass:wght@400;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300&family=Rubik+Iso&family=Shantell+Sans:wght@300;500&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&family=Tilt+Neon&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Tilt Neon', cursive;
+}
+body,html,section{
+  height:100%;
+}
+img{
+  width:40px;
+  border-radius: 50%;
+}
+span{
+  max-width:40%;
+}
+.back-icon{
+  width:32px;
+  background: url('./images/back-icon.png')no-repeat;
+  background-size:contain;
+  background-position: center;
+}
+
+header{
+  background-color: white;
+  display: flex;
+  padding:0.8em 0.5em;
+  gap:0.4em;
+  justify-content:flex-start;
+  color:#002;
+}
+header p{
+  opacity:70%;
+}
+section{
+  background:url('./images/ChatAreaBg.jpg') no-repeat;
+  background-position:center;
+  background-size:cover;
+  box-shadow: 6px 4px 0.6em rgba(0,0,0,0.4),
+              -4px -3px 0.6em rgba(0,0,0,0.4);
+}
+.incoming >.img{
+  border-radius:50% ;
+  width:1.5em;
+}
+.outgoing
+{
+  text-align:right;
+  padding:0.8em;
+}
+.incoming{
+  padding:0.8em;
+  gap:1em;
+}
+.chats{
+  position:relative
+}
+.chats img{
+  position: absolute;   
+  bottom:0;
+}
+.chats > span {
+  color:#fff;
+  background:#4d40b5;
+  display:inline-block;
+  padding:1em 1.2em;
+  border-radius : 12px 12px 0px 12px;
+}
+.chats .incoming-msg{
+  border-radius : 12px 12px 12px 0px;
+  margin-left:3em;
+   color:#fff;
+  background:#4d40b5;
+}
+
+/* send message */
+
+form{
+  width:100%;
+  position:relative;
+}
+
+input{
+  padding: 1em 2em;
+  width: 100%;
+  outline: none;
+  font-size: 1em;
+}
+
+button{
+  position:absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  padding: 1.2em 2em;
+  border: none;
+  background-color:#4d40b5;
+  cursor: pointer;
+}
+.chat-area{
+
+  overflow:scroll;
+  height:calc(100% - (65.59px + 56px));
+
+}
+.chat-area::-webkit-scrollbar{
+  display:none;
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Inter:wght@400;700;800&family=Kumbh+Sans:wght@400;700&family=Overpass:wght@400;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300&family=Rubik+Iso&family=Shantell+Sans:wght@300;500&family=Space+Grotesk:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+html{
+	height: 100%;
+	width: 100%;
+}
+body{	
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+	width: 100%;
+    background-image: url("images/mainBg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h1{
+    text-transform: capitalize;
+    color: #fff;
+    margin: 0 0 2px 0;
+}
+a{
+    color:rgb(229, 229, 229);
+}
+main{
+    padding: 10px 5px;
+    background-color: rgba(42, 5, 78, 0.419);
+    border: 5px solid rgba(42, 5, 78, 0.419);
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:12px;
+}
+.input{
+    position: relative;
+    transition: all 1s ease;
+}
+.input input{
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: rgba(35, 3, 65, 0.473);
+    font-size: 20px;
+    transition: all 1s ease;
+}
+input{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    color: rgb(229, 229, 229);
+    background-color: rgba(31, 2, 59, 0.918) ;
+    border: 1px solid rgba(42, 6, 77, 0.766);
+    cursor: pointer;
+}
+input:hover,input:active{
+    background-color: rgba(27, 2, 52, 0.918);
+}
+.input span{
+    position: absolute;
+    left: 0;
+    padding: 15px 25px;
+    font-size: 20px;
+    color: aliceblue;
+    transition: all 1s ease;
+    pointer-events: none;
+}
+.input input:focus ~ span,
+.input input:valid ~ span{
+    color: rgb(219, 216, 216);
+    transform: translate(20px, -10px);
+    font-size: 15px;
+    padding: 0 2PX;
+    background-color: rgba(42, 5, 78, 0.322);
+}
+@media screen and (max-width:720px){
+	main{
+		width: 50%;
+	}
+}
+/*@media screen and (max-height:650px){
+	main{
+		height: 75%;
+	}
+}*/

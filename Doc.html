@@ -1,0 +1,97 @@
+<html>
+<head>
+
+    <style>
+
+        .page{
+            color: blue;
+        }
+
+        .func{
+            color: red;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+<h1>Backend Documentation of ChitChat </h1>
+<h3>A web application for chatting</h3>
+<br>
+
+<h4>What assets/pages/<label class="page">config.php</label> does: </h4>
+<ul>
+    <li>It contains all constants for db.</li>
+</ul>
+<br>
+
+
+<h4>What assets/pages/<label class="page">functions.php</label> does: </h4>
+<p>All functions are declared here: </p>
+<ul>
+    <li><label class="func">showPage($page, $data="")</label>
+        <p>Shows pages on index.php.</p>
+    </li>
+    <li><label class="func">registerUser($form_data)</label>
+        <p>Registers the user after checking: 
+            <ul>
+                <li> If user has filled every field.</li>
+                <li>Password and confirm password.</li>
+            </ul>
+        </p>
+        <p>
+            Then stores the password after encryting using bf (BlowFish) algo.
+        </p>
+    </li>
+<i>&emsp; $form_data -> username, name, email, password, cpassword</i>
+<br><br>
+    <li><label class="func">checkUser($form_data)</label>
+        <p>For login - to check if user is already present or not
+            <ul>
+                <li>Login possible using email or username</li>
+                <li>Password is checked using password_verify func</li>
+                <li>User status is changed to active[active->true (fieldname in db)]</li>
+            </ul>
+        </p>
+    <i>&emsp; $form_data -> username_email, password</i>
+</ul>
+
+
+<br>
+
+<h4>What assets/pages/<label class="page">actions.php</label> does: </h4>
+<ul>
+    <li>If request sent from signup it sends request to assets/pages/functions.php for registering user(also validates user).</li>
+
+<br>
+
+</body>
+</html>
+
+
+<!-- 
+Doc:
+
+All functions are declared in functions.php: 
+    
+    showPage($page, $data="")
+        Shows pages on index.php.
+
+    registerUser($form_data)
+        Registers the user after checking:
+            If user has filled every field.
+            Password and confirm password.
+        Then stores the password after encryting using bf (BlowFish) algo.
+
+        $form_data -> username, name, email, password, cpassword
+
+    checkUser($form_data)
+        For login - to check if user is already present or not
+        Login possible using email or username
+        Password is checked using password_verify func
+        User status is changed to active[active->true (fieldname in db)] 
+
+        $form_data -> username_email, password
+
+ -->
